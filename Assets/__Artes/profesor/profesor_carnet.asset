@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4e7ed8c3fc14b40a29f8c260f31e44, type: 3}
+  m_Name: profesor_carnet
+  m_EditorClassIdentifier: Assembly-CSharp::Personajes
+  personajeJugable: {fileID: 1970750806953581170, guid: e45c51ccb9665284e80beeebd8dcf088, type: 3}
+  imagen: {fileID: -8670391239209644289, guid: 354fdd9f4219dc64aad75a0cf331bc88, type: 3}
+  nombre: Instructor_carnet

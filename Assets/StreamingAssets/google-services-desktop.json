@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "965083017990",
+    "project_id": "eventos-unity",
+    "storage_bucket": "eventos-unity.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965083017990:android:81f6370cbf862c15b3a487",
+        "android_client_info": {
+          "package_name": "com.karloxkronfeld.eventosunity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7rmDBxFmx_lfmHfWdMoiTJAxNEAODtJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4e7ed8c3fc14b40a29f8c260f31e44, type: 3}
+  m_Name: chica_afro
+  m_EditorClassIdentifier: Assembly-CSharp::Personajes
+  personajeJugable: {fileID: 3685750471968436509, guid: bf9ad5147db61954e917dc00a5ab4026, type: 3}
+  imagen: {fileID: -946904076065464054, guid: aded71fcaea76f748ae36967adc618a3, type: 3}
+  nombre: Aprendiz_chica

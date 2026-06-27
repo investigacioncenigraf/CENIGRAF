@@ -1,0 +1,346 @@
+fileFormatVersion: 2
+guid: 6f93c2fd5326f0548a343ea2b48c75a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3473894220330926614
+    second: 7SPRITES_sinfondo_0
+  - first:
+      213: 6747444769099017606
+    second: 7SPRITES_sinfondo_1
+  - first:
+      213: -8891499055243741845
+    second: 7SPRITES_sinfondo_2
+  - first:
+      213: 6554331449926978450
+    second: 7SPRITES_sinfondo_3
+  - first:
+      213: -1031294268024167736
+    second: 7SPRITES_sinfondo_4
+  - first:
+      213: -1394814171846196713
+    second: 7SPRITES_sinfondo_5
+  - first:
+      213: -5073665637766419328
+    second: 7SPRITES_sinfondo_6
+  - first:
+      213: 6649357204787344072
+    second: 7SPRITES_sinfondo_7
+  - first:
+      213: 4126868085106846787
+    second: 7SPRITES_sinfondo_8
+  - first:
+      213: 3993351536417513743
+    second: 7SPRITES_sinfondo_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 196
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed74e1bc9f3acfc0800000000000000
+      internalID: -3473894220330926614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 95
+        width: 201
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68de6bb944db3ad50800000000000000
+      internalID: 6747444769099017606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_3
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1
+        width: 138
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b81153ab9a5fa50800000000000000
+      internalID: 6554331449926978450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_4
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 55
+        width: 191
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2e587c35b10b1f0800000000000000
+      internalID: -1031294268024167736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_6
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 63
+        width: 153
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ca3dfdbf7b699b0800000000000000
+      internalID: -5073665637766419328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_7
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 77
+        width: 139
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2b800e523474c50800000000000000
+      internalID: 6649357204787344072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_8
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1
+        width: 295
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ca0b788a4954930800000000000000
+      internalID: 4126868085106846787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7SPRITES_sinfondo_9
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 29
+        width: 230
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f012d6f801c3b6730800000000000000
+      internalID: 3993351536417513743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5db4aa4c98eaa2a4687d4fb916bf38a8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      7SPRITES_sinfondo_0: -3473894220330926614
+      7SPRITES_sinfondo_1: 6747444769099017606
+      7SPRITES_sinfondo_2: -8891499055243741845
+      7SPRITES_sinfondo_3: 6554331449926978450
+      7SPRITES_sinfondo_4: -1031294268024167736
+      7SPRITES_sinfondo_5: -1394814171846196713
+      7SPRITES_sinfondo_6: -5073665637766419328
+      7SPRITES_sinfondo_7: 6649357204787344072
+      7SPRITES_sinfondo_8: 4126868085106846787
+      7SPRITES_sinfondo_9: 3993351536417513743
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

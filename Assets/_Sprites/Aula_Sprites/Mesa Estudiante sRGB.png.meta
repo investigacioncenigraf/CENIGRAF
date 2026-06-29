@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: cb89d26aa7e9d81458789de01ec8fa17
+guid: 637e16bbdb8749840b915e8d2bb59cef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4488123567249765529
-    second: Mesa Estudiante sRGB 1_0
+      213: 2259685716819879768
+    second: Mesa Estudiante sRGB_0
   - first:
-      213: 1441882380087274672
-    second: Mesa Estudiante sRGB 1_1
+      213: 7213371214386882971
+    second: Mesa Estudiante sRGB_1
   - first:
-      213: 4268140881751733272
-    second: Mesa Estudiante sRGB 1_2
+      213: -393815200644066261
+    second: Mesa Estudiante sRGB_2
   - first:
-      213: 3178743805000629586
-    second: Mesa Estudiante sRGB 1_3
+      213: -1027578583994683640
+    second: Mesa Estudiante sRGB_3
   - first:
-      213: 4975119906855882160
-    second: Mesa Estudiante sRGB 1_4
+      213: -1562868394269980925
+    second: Mesa Estudiante sRGB_4
   - first:
-      213: -1996000276722277170
-    second: Mesa Estudiante sRGB 1_5
+      213: -8276922454779703343
+    second: Mesa Estudiante sRGB_5
   - first:
-      213: 6913898480121988479
-    second: Mesa Estudiante sRGB 1_6
+      213: 8763039588048257075
+    second: Mesa Estudiante sRGB_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_0
+      name: Mesa Estudiante sRGB_0
       rect:
         serializedVersion: 2
         x: 12
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76bc40a056bf6b1c0800000000000000
-      internalID: -4488123567249765529
+      spriteID: 857a217ef240c5f10800000000000000
+      internalID: 2259685716819879768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_1
+      name: Mesa Estudiante sRGB_1
       rect:
         serializedVersion: 2
         x: 53
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bc2ff0a268920410800000000000000
-      internalID: 1441882380087274672
+      spriteID: b99ee82c6ea0b1460800000000000000
+      internalID: 7213371214386882971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_2
+      name: Mesa Estudiante sRGB_2
       rect:
         serializedVersion: 2
         x: 439
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8147224b48b7b3b30800000000000000
-      internalID: 4268140881751733272
+      spriteID: b24167a5923e88af0800000000000000
+      internalID: -393815200644066261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_3
+      name: Mesa Estudiante sRGB_3
       rect:
         serializedVersion: 2
         x: 44
@@ -199,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25d390126aa2d1c20800000000000000
-      internalID: 3178743805000629586
+      spriteID: 80fa232e8be4db1f0800000000000000
+      internalID: -1027578583994683640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_4
+      name: Mesa Estudiante sRGB_4
       rect:
         serializedVersion: 2
         x: 89
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bd8e1b223d2b0540800000000000000
-      internalID: 4975119906855882160
+      spriteID: 3074ad0d9739f4ae0800000000000000
+      internalID: -1562868394269980925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_5
+      name: Mesa Estudiante sRGB_5
       rect:
         serializedVersion: 2
         x: 354
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec42366d258cc44e0800000000000000
-      internalID: -1996000276722277170
+      spriteID: 1dfc66161e6722d80800000000000000
+      internalID: -8276922454779703343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mesa Estudiante sRGB 1_6
+      name: Mesa Estudiante sRGB_6
       rect:
         serializedVersion: 2
         x: 352
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f75c8c8490a13ff50800000000000000
-      internalID: 6913898480121988479
+      spriteID: 3304d46a3129c9970800000000000000
+      internalID: 8763039588048257075
       vertices: []
       indices: 
       edges: []
@@ -275,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mesa Estudiante sRGB 1_0: -4488123567249765529
-      Mesa Estudiante sRGB 1_1: 1441882380087274672
-      Mesa Estudiante sRGB 1_2: 4268140881751733272
-      Mesa Estudiante sRGB 1_3: 3178743805000629586
-      Mesa Estudiante sRGB 1_4: 4975119906855882160
-      Mesa Estudiante sRGB 1_5: -1996000276722277170
-      Mesa Estudiante sRGB 1_6: 6913898480121988479
+      Mesa Estudiante sRGB_0: 2259685716819879768
+      Mesa Estudiante sRGB_1: 7213371214386882971
+      Mesa Estudiante sRGB_2: -393815200644066261
+      Mesa Estudiante sRGB_3: -1027578583994683640
+      Mesa Estudiante sRGB_4: -1562868394269980925
+      Mesa Estudiante sRGB_5: -8276922454779703343
+      Mesa Estudiante sRGB_6: 8763039588048257075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

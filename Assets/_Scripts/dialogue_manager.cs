@@ -10,7 +10,10 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Dialog_UI dialogUI;
     
     private bool dialogRunning;
-
+    private void Start()
+    {
+        dialogUIObject.SetActive(false);
+    }
     private void Awake()
     {
         if (Instance == null)

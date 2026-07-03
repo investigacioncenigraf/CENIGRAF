@@ -7,24 +7,29 @@ public class OsoGuia : MonoBehaviour
     public float velocidad = 2f;
     public bool repetirRuta = false;
 
-    [Header("Inicio")]
-    public float delayInicial = 5f;
-
     private int puntoActual = 0;
     private Animator animator;
     private bool puedeMoverse = false;
 
-    void Start()
+    private void OnEnable()
+    {
+        DialogManager.OnDialogueFinished += IniciarRecorrido;
+    }
+
+    private void OnDisable()
+    {
+        DialogManager.OnDialogueFinished -= IniciarRecorrido;
+    }
+
+    private void Start()
     {
         animator = GetComponent<Animator>();
 
         if (puntos.Length > 1)
         {
-            // Posicionar al oso en el primer punto
             transform.position = puntos[0].position;
             puntoActual = 1;
 
-            // Mirar hacia el siguiente punto mientras espera
             Vector2 direccionInicial =
                 (puntos[1].position - puntos[0].position).normalized;
 
@@ -32,16 +37,14 @@ public class OsoGuia : MonoBehaviour
             animator.SetFloat("vertical", direccionInicial.y);
             animator.SetFloat("speed", 0f);
         }
-
-        Invoke(nameof(ComenzarRecorrido), delayInicial);
     }
 
-    void ComenzarRecorrido()
+    public void IniciarRecorrido()
     {
         puedeMoverse = true;
     }
 
-    void Update()
+    private void Update()
     {
         if (!puedeMoverse)
         {
@@ -65,19 +68,16 @@ public class OsoGuia : MonoBehaviour
 
         Vector2 direccion = (destino - transform.position).normalized;
 
-        // Actualizar animaciones
         animator.SetFloat("horizontal", direccion.x);
         animator.SetFloat("vertical", direccion.y);
         animator.SetFloat("speed", 1f);
 
-        // Movimiento
         transform.position = Vector3.MoveTowards(
             transform.position,
             destino,
             velocidad * Time.deltaTime
         );
 
-        // Llegó al punto
         if (Vector3.Distance(transform.position, destino) < 0.05f)
         {
             puntoActual++;

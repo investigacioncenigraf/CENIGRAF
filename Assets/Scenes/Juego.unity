@@ -131893,7 +131893,6 @@ MonoBehaviour:
   - {fileID: 906194465}
   velocidad: 5
   repetirRuta: 0
-  delayInicial: 5
 --- !u!61 &991098683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191746,6 +191745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   dialogUIObject: {fileID: 786007387}
   dialogUI: {fileID: 786007388}
+  osoGuia: {fileID: 991098682}
 --- !u!4 &1477260717
 Transform:
   m_ObjectHideFlags: 0

@@ -5,36 +5,79 @@ using System.Collections;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
-    public void EntrarCampus()
+    [Header("Ventanas")]
+    [SerializeField] private GameObject ventanaOpciones;
+    [SerializeField] private GameObject ventanaSalir;
+    [SerializeField] private GameObject ventanaEventos;
+
+    private void Start()
     {
-        PhotonNetwork.JoinOrCreateRoom("campus",
-            new RoomOptions { MaxPlayers = 20 },
-            TypedLobby.Default);
+        CerrarTodasLasVentanas();
     }
 
-    public void EntrarArtes()
+    #region Botones
+
+    public void BotonEntrar()
     {
-        PhotonNetwork.JoinOrCreateRoom("artes",
+        PhotonNetwork.JoinOrCreateRoom(
+            "campus",
             new RoomOptions { MaxPlayers = 20 },
-            TypedLobby.Default);
+            TypedLobby.Default
+        );
     }
-        public void EntrarABC()
+
+    public void BotonOpciones()
     {
-        PhotonNetwork.JoinOrCreateRoom("ABC contrado aprendizaje",
-            new RoomOptions { MaxPlayers = 20 },
-            TypedLobby.Default);
+        MostrarVentana(ventanaOpciones);
     }
-            public void EntrarEventos()
+
+    public void BotonSalir()
     {
-        PhotonNetwork.JoinOrCreateRoom("eventos",
-            new RoomOptions { MaxPlayers = 20 },
-            TypedLobby.Default);
+        MostrarVentana(ventanaSalir);
     }
-                
-            public void EntrarZajuna()
+
+    public void BotonEventos()
     {
-            Application.OpenURL("https://zajuna.sena.edu.co/");
+        MostrarVentana(ventanaEventos);
     }
+
+    public void CerrarVentanas()
+    {
+        CerrarTodasLasVentanas();
+    }
+
+    public void EntrarZajuna()
+    {
+        Application.OpenURL("https://zajuna.sena.edu.co/");
+    }
+
+    #endregion
+
+    #region Ventanas
+
+    private void MostrarVentana(GameObject ventana)
+    {
+        CerrarTodasLasVentanas();
+
+        if (ventana != null)
+            ventana.SetActive(true);
+    }
+
+    private void CerrarTodasLasVentanas()
+    {
+        if (ventanaOpciones != null)
+            ventanaOpciones.SetActive(false);
+
+        if (ventanaSalir != null)
+            ventanaSalir.SetActive(false);
+
+        if (ventanaEventos != null)
+            ventanaEventos.SetActive(false);
+    }
+
+    #endregion
+
+    #region Photon
 
     public override void OnJoinedRoom()
     {
@@ -44,9 +87,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             StartCoroutine(CargarEscena());
     }
 
-    IEnumerator CargarEscena()
+    private IEnumerator CargarEscena()
     {
         yield return new WaitForSeconds(0.5f);
         PhotonNetwork.LoadLevel("Juego");
     }
+
+    #endregion
 }

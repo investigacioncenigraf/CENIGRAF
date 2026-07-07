@@ -3,7 +3,11 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueLine
 {
-    [TextArea(3, 8)]
+    public string speaker;
+
+    public Sprite portrait;
+
+    [TextArea(3,8)]
     public string text;
 }
 

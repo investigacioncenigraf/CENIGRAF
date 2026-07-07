@@ -11,6 +11,9 @@ public class OsoGuia : MonoBehaviour
     private Animator animator;
     private bool puedeMoverse = false;
 
+    // Referencia al script de diálogo del NPC
+    private dialogNPC npcDialogue;
+
     private void OnEnable()
     {
         DialogManager.OnDialogueFinished += IniciarRecorrido;
@@ -24,6 +27,7 @@ public class OsoGuia : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        npcDialogue = GetComponent<dialogNPC>();
 
         if (puntos.Length > 1)
         {
@@ -56,6 +60,16 @@ public class OsoGuia : MonoBehaviour
         {
             animator.SetFloat("speed", 0f);
 
+            // Detener el movimiento
+            puedeMoverse = false;
+
+            // Cambiar al siguiente diálogo del NPC
+            if (npcDialogue != null)
+            {
+                npcDialogue.NextDialogue();
+            }
+
+            // Si la ruta es repetible, reiniciarla
             if (repetirRuta)
             {
                 puntoActual = 0;

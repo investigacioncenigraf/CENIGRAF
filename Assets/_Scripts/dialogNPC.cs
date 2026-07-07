@@ -2,30 +2,91 @@ using UnityEngine;
 
 public class dialogNPC : MonoBehaviour
 {
-    [SerializeField] private DialogueData dialogue;
+    [Header("Diálogos")]
+    [SerializeField] private DialogueData[] dialogues;
 
-    [SerializeField]
-    private KeyCode interactionKey = KeyCode.E;
+    [Header("Interacción")]
+    [SerializeField] private KeyCode interactionKey = KeyCode.E;
+
+    [Header("Indicador de interacción")]
+    [SerializeField] private GameObject interactionIcon;
 
     private bool playerInside;
+    private int currentDialogue = 0;
 
-    void Update()
+    private void Start()
     {
-        if (playerInside && Input.GetKeyDown(interactionKey))
+        if (interactionIcon != null)
+            interactionIcon.SetActive(false);
+    }
+
+    private void Update()
+    {
+        // Mostrar el icono solo si:
+        // - El jugador está cerca.
+        // - No hay un diálogo abierto.
+        if (interactionIcon != null)
         {
-            DialogManager.Instance.StartDialogue(dialogue);
+            bool mostrar =
+                playerInside &&
+                (DialogManager.Instance == null ||
+                !DialogManager.Instance.IsDialogueRunning());
+
+            interactionIcon.SetActive(mostrar);
+        }
+
+        if (!playerInside)
+            return;
+
+        if (DialogManager.Instance != null &&
+            DialogManager.Instance.IsDialogueRunning())
+            return;
+
+        if (Input.GetKeyDown(interactionKey))
+        {
+            if (currentDialogue < dialogues.Length &&
+                dialogues[currentDialogue] != null)
+            {
+                // Ocultar el icono mientras habla
+                if (interactionIcon != null)
+                    interactionIcon.SetActive(false);
+
+                DialogManager.Instance.StartDialogue(dialogues[currentDialogue]);
+            }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void NextDialogue()
+    {
+        if (currentDialogue < dialogues.Length - 1)
+            currentDialogue++;
+    }
+
+    public void SetDialogue(int index)
+    {
+        if (index >= 0 && index < dialogues.Length)
+            currentDialogue = index;
+    }
+
+    public int GetCurrentDialogue()
+    {
+        return currentDialogue;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
             playerInside = true;
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInside = false;
+
+            if (interactionIcon != null)
+                interactionIcon.SetActive(false);
+        }
     }
 }

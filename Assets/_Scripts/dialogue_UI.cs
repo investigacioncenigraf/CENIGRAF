@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialog_UI : MonoBehaviour
 {
     [Header("Referencias")]
+    [SerializeField] private TMP_Text speakerName;
     [SerializeField] private TMP_Text dialogText;
     [SerializeField] private GameObject continueArrow;
+
+    [SerializeField] private Image portraitImage;
 
     [Header("Configuración")]
     [SerializeField]
@@ -24,9 +28,21 @@ public class Dialog_UI : MonoBehaviour
         }
     }
 
-    //======================================================
-    // Escribe una página
-    //======================================================
+    //=====================================================
+    // Mostrar una línea de diálogo
+    //=====================================================
+
+    public IEnumerator ShowDialogue(DialogueLine line)
+    {
+        speakerName.text = line.speaker;
+        portraitImage.sprite = line.portrait;
+
+        yield return StartCoroutine(ShowString(line.text));
+    }
+
+    //=====================================================
+    // Escribir texto
+    //=====================================================
 
     private IEnumerator WriteText(string text)
     {
@@ -60,9 +76,9 @@ public class Dialog_UI : MonoBehaviour
         continueArrow.SetActive(true);
     }
 
-    //======================================================
-    // Divide en páginas
-    //======================================================
+    //=====================================================
+    // Divide el texto en páginas
+    //=====================================================
 
     private List<string> DivideIntoPages(string fullText)
     {
@@ -84,22 +100,24 @@ public class Dialog_UI : MonoBehaviour
 
             int overflow = dialogText.firstOverflowCharacterIndex;
 
-            int split = remaining.LastIndexOf(' ', overflow);
+            int splitIndex = remaining.LastIndexOf(' ', overflow);
 
-            if (split <= 0)
-                split = overflow;
+            if (splitIndex <= 0)
+                splitIndex = overflow;
 
-            pages.Add(remaining.Substring(0, split).TrimEnd());
+            string page = remaining.Substring(0, splitIndex).TrimEnd();
 
-            remaining = remaining.Substring(split).TrimStart();
+            pages.Add(page);
+
+            remaining = remaining.Substring(splitIndex).TrimStart();
         }
 
         return pages;
     }
 
-    //======================================================
-    // Mostrar diálogo completo
-    //======================================================
+    //=====================================================
+    // Mostrar todas las páginas de una línea
+    //=====================================================
 
     public IEnumerator ShowString(string text)
     {

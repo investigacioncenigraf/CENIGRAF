@@ -6,7 +6,7 @@ public class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance { get; private set; }
 
-    // Evento que se dispara cuando termina cualquier diálogo
+    // Evento que se dispara al terminar un diálogo
     public static event Action OnDialogueFinished;
 
     [Header("Referencias")]
@@ -18,14 +18,9 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
-        {
             Instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-            return;
-        }
     }
 
     private void Start()
@@ -36,10 +31,14 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialogue(DialogueData dialogue)
     {
-        if (!dialogRunning)
+        if (dialogue == null)
         {
-            StartCoroutine(DialogueRoutine(dialogue));
+            Debug.LogWarning("No se asignó un DialogueData.");
+            return;
         }
+
+        if (!dialogRunning)
+            StartCoroutine(DialogueRoutine(dialogue));
     }
 
     private IEnumerator DialogueRoutine(DialogueData dialogue)
@@ -50,14 +49,17 @@ public class DialogManager : MonoBehaviour
 
         foreach (DialogueLine line in dialogue.lines)
         {
-            yield return StartCoroutine(dialogUI.ShowString(line.text));
+            if (line == null)
+                continue;
+
+            yield return StartCoroutine(dialogUI.ShowDialogue(line));
         }
 
         dialogUIObject.SetActive(false);
 
         dialogRunning = false;
 
-        // Avisar que terminó el diálogo
+        // Avisar a cualquier script que el diálogo terminó
         OnDialogueFinished?.Invoke();
     }
 

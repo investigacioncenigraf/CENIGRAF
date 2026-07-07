@@ -13,6 +13,18 @@ MonoBehaviour:
   m_Name: Oso
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - text: Hola
-  - text: BIENVENIDO
-  - text: este es un ambienten multijugador del SENA
+  - speaker: Oso de Anteojos
+    portrait: {fileID: 6120914730915384989, guid: e5a971fc39c3037479eca94363773240, type: 3}
+    text: "Hola aventurero, bienvenido al centro de formaci\xF3n."
+  - speaker: Yo
+    portrait: {fileID: 8209660055318790805, guid: 4fdc9d4121e9d3f44adf55ff3d2177c8, type: 3}
+    text: "\xBFqu\xE9 es un centro de formaci\xF3n?"
+  - speaker: Oso de anteojos
+    portrait: {fileID: 6120914730915384989, guid: e5a971fc39c3037479eca94363773240, type: 3}
+    text: Es una sede de aprendizaje...
+  - speaker: Yo
+    portrait: {fileID: 8209660055318790805, guid: 4fdc9d4121e9d3f44adf55ff3d2177c8, type: 3}
+    text: Que interesante!
+  - speaker: Oso de anteojos
+    portrait: {fileID: 6120914730915384989, guid: e5a971fc39c3037479eca94363773240, type: 3}
+    text: "Ven, S\xCDGUEME, te ense\xF1ar\xE9 este maravilloso lugar."

@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovimientoJugador
   velocidad: 3
   velocidadTurbo: 10
+  puedeMoverse: 1
   nameText: {fileID: 5528984621433587320}
   joystick: {fileID: 0}
   chatInput: {fileID: 0}

@@ -20,11 +20,8 @@ public class dialogNPC : MonoBehaviour
             interactionIcon.SetActive(false);
     }
 
-    private void Update()
+    void Update()
     {
-        // Mostrar el icono solo si:
-        // - El jugador está cerca.
-        // - No hay un diálogo abierto.
         if (interactionIcon != null)
         {
             bool mostrar =
@@ -44,15 +41,19 @@ public class dialogNPC : MonoBehaviour
 
         if (Input.GetKeyDown(interactionKey))
         {
-            if (currentDialogue < dialogues.Length &&
-                dialogues[currentDialogue] != null)
-            {
-                // Ocultar el icono mientras habla
-                if (interactionIcon != null)
-                    interactionIcon.SetActive(false);
+            StartCurrentDialogue();
+        }
+    }
 
-                DialogManager.Instance.StartDialogue(dialogues[currentDialogue]);
-            }
+    public void StartCurrentDialogue()
+    {
+        if (currentDialogue < dialogues.Length &&
+            dialogues[currentDialogue] != null)
+        {
+            if (interactionIcon != null)
+                interactionIcon.SetActive(false);
+
+            DialogManager.Instance.StartDialogue(dialogues[currentDialogue]);
         }
     }
 

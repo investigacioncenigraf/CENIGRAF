@@ -7,11 +7,14 @@ public class OsoGuia : MonoBehaviour
     public float velocidad = 2f;
     public bool repetirRuta = false;
 
+    [Header("Objetos que aparecerán al finalizar el recorrido")]
+    [SerializeField] private GameObject carnet;
+
     private int puntoActual = 0;
     private Animator animator;
     private bool puedeMoverse = false;
+    private bool recorridoFinalizado = false;
 
-    // Referencia al script de diálogo del NPC
     private dialogNPC npcDialogue;
 
     private void OnEnable()
@@ -29,6 +32,10 @@ public class OsoGuia : MonoBehaviour
         animator = GetComponent<Animator>();
         npcDialogue = GetComponent<dialogNPC>();
 
+        // El carnet comienza oculto
+        if (carnet != null)
+            carnet.SetActive(false);
+
         if (puntos.Length > 1)
         {
             transform.position = puntos[0].position;
@@ -45,6 +52,10 @@ public class OsoGuia : MonoBehaviour
 
     public void IniciarRecorrido()
     {
+        // Solo iniciar el recorrido una vez
+        if (recorridoFinalizado)
+            return;
+
         puedeMoverse = true;
     }
 
@@ -56,22 +67,29 @@ public class OsoGuia : MonoBehaviour
             return;
         }
 
+        // Llegó al destino
         if (puntoActual >= puntos.Length)
         {
             animator.SetFloat("speed", 0f);
-
-            // Detener el movimiento
             puedeMoverse = false;
+            recorridoFinalizado = true;
 
-            // Cambiar al siguiente diálogo del NPC
+            // Activar el diálogo 2
             if (npcDialogue != null)
             {
                 npcDialogue.NextDialogue();
             }
 
-            // Si la ruta es repetible, reiniciarla
+            // Mostrar el carnet SOLO UNA VEZ
+            if (carnet != null && !carnet.activeSelf)
+            {
+                carnet.SetActive(true);
+            }
+
+            // Reiniciar recorrido si está activado
             if (repetirRuta)
             {
+                recorridoFinalizado = false;
                 puntoActual = 0;
             }
 

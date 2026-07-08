@@ -6,7 +6,6 @@ public class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance { get; private set; }
 
-    // Evento que se dispara al terminar un diálogo
     public static event Action OnDialogueFinished;
 
     [Header("Referencias")]
@@ -14,6 +13,8 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Dialog_UI dialogUI;
 
     private bool dialogRunning = false;
+
+    private MovimientoJugador jugador;
 
     private void Awake()
     {
@@ -32,10 +33,7 @@ public class DialogManager : MonoBehaviour
     public void StartDialogue(DialogueData dialogue)
     {
         if (dialogue == null)
-        {
-            Debug.LogWarning("No se asignó un DialogueData.");
             return;
-        }
 
         if (!dialogRunning)
             StartCoroutine(DialogueRoutine(dialogue));
@@ -44,6 +42,25 @@ public class DialogManager : MonoBehaviour
     private IEnumerator DialogueRoutine(DialogueData dialogue)
     {
         dialogRunning = true;
+
+        // Buscar el jugador local
+        if (jugador == null)
+        {
+            MovimientoJugador[] jugadores = FindObjectsByType<MovimientoJugador>(FindObjectsSortMode.None);
+
+            foreach (MovimientoJugador j in jugadores)
+            {
+                if (j.photonView.IsMine)
+                {
+                    jugador = j;
+                    break;
+                }
+            }
+        }
+
+        // Bloquear movimiento
+        if (jugador != null)
+            jugador.puedeMoverse = false;
 
         dialogUIObject.SetActive(true);
 
@@ -57,9 +74,12 @@ public class DialogManager : MonoBehaviour
 
         dialogUIObject.SetActive(false);
 
+        // Volver a permitir movimiento
+        if (jugador != null)
+            jugador.puedeMoverse = true;
+
         dialogRunning = false;
 
-        // Avisar a cualquier script que el diálogo terminó
         OnDialogueFinished?.Invoke();
     }
 

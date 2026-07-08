@@ -10,6 +10,9 @@ public class OsoGuia : MonoBehaviour
     [Header("Objetos que aparecerán al finalizar el recorrido")]
     [SerializeField] private GameObject carnet;
 
+    [Header("Referencias")]
+    [SerializeField] private MisionesUI uiMisiones;
+
     private int puntoActual = 0;
     private Animator animator;
     private bool puedeMoverse = false;
@@ -56,6 +59,12 @@ public class OsoGuia : MonoBehaviour
         if (recorridoFinalizado)
             return;
 
+        // Completar la primera misión
+        if (uiMisiones != null)
+        {
+            uiMisiones.CompletarHablarConOsoGuia();
+        }
+
         puedeMoverse = true;
     }
 
@@ -74,13 +83,13 @@ public class OsoGuia : MonoBehaviour
             puedeMoverse = false;
             recorridoFinalizado = true;
 
-            // Activar el diálogo 2
+            // Activar el segundo diálogo
             if (npcDialogue != null)
             {
                 npcDialogue.NextDialogue();
             }
 
-            // Mostrar el carnet SOLO UNA VEZ
+            // Mostrar el carnet solo una vez
             if (carnet != null && !carnet.activeSelf)
             {
                 carnet.SetActive(true);

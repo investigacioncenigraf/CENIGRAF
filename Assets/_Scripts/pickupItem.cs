@@ -11,6 +11,9 @@ public class PickupItem : MonoBehaviour
     [SerializeField]
     private int nextDialogueIndex = 2;
 
+    [Header("Referencias")]
+    [SerializeField] private MisionesUI uiMisiones;
+
     private bool collected = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +25,12 @@ public class PickupItem : MonoBehaviour
             return;
 
         collected = true;
+
+        // Completar la misión "Conseguir tu carnet SENA"
+        if (uiMisiones != null)
+        {
+            uiMisiones.CompletarCarnet();
+        }
 
         // Sonido
         if (pickupSound != null)

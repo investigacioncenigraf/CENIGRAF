@@ -1,45 +1,99 @@
+using System.Collections;
 using UnityEngine;
 
 public class UIVentanas : MonoBehaviour
 {
     [Header("Paneles")]
-    [SerializeField] private GameObject panelMisiones;
-    [SerializeField] private GameObject panelOpciones;
+    [SerializeField] private RectTransform panelMisiones;
+    [SerializeField] private RectTransform panelOpciones;
+
+    [Header("Animación")]
+    [SerializeField] private float duracion = 0.3f;
+    [SerializeField] private float distancia = 700f;
+
+    private Vector2 posMisiones;
+    private Vector2 posOpciones;
 
     private void Start()
     {
-        // Al iniciar ambos paneles permanecen ocultos
-        panelMisiones.SetActive(false);
-        panelOpciones.SetActive(false);
+        posMisiones = panelMisiones.anchoredPosition;
+        posOpciones = panelOpciones.anchoredPosition;
+
+        panelMisiones.gameObject.SetActive(false);
+        panelOpciones.gameObject.SetActive(false);
     }
 
     //=========================
-    // BOTÓN MISIONES
+    // MISIONES
     //=========================
 
     public void AbrirMisiones()
     {
-        panelOpciones.SetActive(false);
-        panelMisiones.SetActive(true);
+        panelOpciones.gameObject.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(Abrir(panelMisiones, posMisiones));
     }
 
     public void CerrarMisiones()
     {
-        panelMisiones.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(Cerrar(panelMisiones, posMisiones));
     }
 
     //=========================
-    // BOTÓN OPCIONES
+    // OPCIONES
     //=========================
 
     public void AbrirOpciones()
     {
-        panelMisiones.SetActive(false);
-        panelOpciones.SetActive(true);
+        panelMisiones.gameObject.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(Abrir(panelOpciones, posOpciones));
     }
 
     public void CerrarOpciones()
     {
-        panelOpciones.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(Cerrar(panelOpciones, posOpciones));
+    }
+
+    //=========================
+    // ANIMACIONES
+    //=========================
+
+    IEnumerator Abrir(RectTransform panel, Vector2 posicionFinal)
+    {
+        panel.gameObject.SetActive(true);
+
+        Vector2 inicio = posicionFinal - new Vector2(0, distancia);
+        panel.anchoredPosition = inicio;
+
+        float t = 0;
+
+        while (t < duracion)
+        {
+            t += Time.deltaTime;
+            panel.anchoredPosition = Vector2.Lerp(inicio, posicionFinal, t / duracion);
+            yield return null;
+        }
+
+        panel.anchoredPosition = posicionFinal;
+    }
+
+    IEnumerator Cerrar(RectTransform panel, Vector2 posicionFinal)
+    {
+        Vector2 fin = posicionFinal - new Vector2(0, distancia);
+
+        float t = 0;
+
+        while (t < duracion)
+        {
+            t += Time.deltaTime;
+            panel.anchoredPosition = Vector2.Lerp(posicionFinal, fin, t / duracion);
+            yield return null;
+        }
+
+        panel.gameObject.SetActive(false);
+        panel.anchoredPosition = posicionFinal;
     }
 }

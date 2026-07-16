@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 05aa371eb73952549ae6085c3632e990
+guid: d8bf014274aa6a84384a2204e5c4aae0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8351565139421799900
-    second: Monitor Aula OFF sRGB_0
-  - first:
-      213: 2297445264273627494
-    second: Monitor Aula OFF sRGB_1
+      213: -5563400405806741855
+    second: BotonV1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,35 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monitor Aula OFF sRGB_0
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 157
-        width: 12
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42a5a3211c7491c80800000000000000
-      internalID: -8351565139421799900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monitor Aula OFF sRGB_1
+      name: BotonV1_0
       rect:
         serializedVersion: 2
         x: 17
-        y: 1
-        width: 237
-        height: 246
+        y: 14
+        width: 1275
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 669dee3ab4a22ef10800000000000000
-      internalID: 2297445264273627494
+      spriteID: 1a600ac9ec4dac2b0800000000000000
+      internalID: -5563400405806741855
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Monitor Aula OFF sRGB_0: -8351565139421799900
-      Monitor Aula OFF sRGB_1: 2297445264273627494
+      BotonV1_0: -5563400405806741855
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

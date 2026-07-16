@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 05aa371eb73952549ae6085c3632e990
+guid: 86904831f7951d547ade6ff8439cca05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8351565139421799900
-    second: Monitor Aula OFF sRGB_0
-  - first:
-      213: 2297445264273627494
-    second: Monitor Aula OFF sRGB_1
+      213: 7064684072576232700
+    second: BotonV2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monitor Aula OFF sRGB_0
+      name: BotonV2_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 157
-        width: 12
-        height: 45
+        x: 16
+        y: 14
+        width: 1106
+        height: 505
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42a5a3211c7491c80800000000000000
-      internalID: -8351565139421799900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monitor Aula OFF sRGB_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 1
-        width: 237
-        height: 246
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 669dee3ab4a22ef10800000000000000
-      internalID: 2297445264273627494
+      spriteID: cfc2444dbbcca0260800000000000000
+      internalID: 7064684072576232700
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Monitor Aula OFF sRGB_0: -8351565139421799900
-      Monitor Aula OFF sRGB_1: 2297445264273627494
+      BotonV2_0: 7064684072576232700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

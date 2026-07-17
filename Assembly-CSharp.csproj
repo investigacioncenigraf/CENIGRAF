@@ -52,6 +52,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Demo Chat\Code\NamePickNewGui.cs" />
     <Compile Include="Assets\_Scripts\restriccionArea.cs" />
     <Compile Include="Assets\_Scripts\DialogueData.cs" />
+    <Compile Include="Assets\_Scripts\pulsehastaclick.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Demo Chat\Code\Utilities\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\_Scripts\UImisiones.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
@@ -81,7 +82,9 @@
     <Compile Include="Assets\_Scripts\username.cs" />
     <Compile Include="Assets\_Scripts\MENUDSELECCIONPERSONAJE.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Demo Chat\Code\FriendItem.cs" />
+    <Compile Include="Assets\_Scripts\logo_interactivo.cs" />
     <Compile Include="Assets\_Scripts\mover_persona_colores.cs" />
+    <Compile Include="Assets\_Scripts\BanderaInteractiva.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\_Scripts\nombresala.cs" />
@@ -97,6 +100,7 @@
     <Compile Include="Assets\_Scripts\entrar_biblioteca.cs" />
     <Compile Include="Assets\_Scripts\interaccion_prefab.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Demo Chat\Code\Utilities\TextButtonTransition.cs" />
+    <Compile Include="Assets\_Scripts\himno_interactivo.cs" />
     <Compile Include="Assets\_Scripts\dialogNPC.cs" />
   </ItemGroup>
   <ItemGroup>

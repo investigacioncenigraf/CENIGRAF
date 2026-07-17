@@ -32,13 +32,27 @@ public class Dialog_UI : MonoBehaviour
     // Mostrar una línea de diálogo
     //=====================================================
 
-    public IEnumerator ShowDialogue(DialogueLine line)
-    {
-        speakerName.text = line.speaker;
-        portraitImage.sprite = line.portrait;
+public IEnumerator ShowDialogue(DialogueLine line)
+{
+    string nombre = line.speaker;
 
-        yield return StartCoroutine(ShowString(line.text));
+    // Si el hablante es "Yo", mostrar el nombre del jugador
+    if (nombre == "Yo")
+    {
+        nombre = PlayerPrefs.GetString("Username", "Jugador");
     }
+
+    speakerName.text = nombre;
+
+    // Mostrar retrato
+    if (portraitImage != null)
+    {
+        portraitImage.sprite = line.portrait;
+        portraitImage.enabled = line.portrait != null;
+    }
+
+    yield return StartCoroutine(ShowString(line.text));
+}
 
     //=====================================================
     // Escribir texto
